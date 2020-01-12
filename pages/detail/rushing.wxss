@@ -1,0 +1,25 @@
+.height150{
+    height: 170px;
+}
+.center{
+    text-align: center;
+}
+.cycle{
+    height: 76px;
+    width: 76px;
+}
+.text-cycle{
+    border-radius:50%; 
+    height: 76px; 
+    width: 76px; 
+    display: inline-block; 
+    background: lightblue;  
+}
+.text-num{
+    /* display: block;      */
+    height: 20px;    
+    line-height: 20px;    
+    text-align: center;
+    top: 30px;
+}
+

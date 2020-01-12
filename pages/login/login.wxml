@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<view class="container-fluid large-margin">
+    <view class="line height40">
+        <image class="xsmall-icon" src="../../image/icon_11.png"></image>
+        <input class="small-text small-margin middle-padding autofill" placeholder-class="placeholderStyle" bindinput="bindinputUsername" value="{{username}}" auto-focus placeholder="12306账号（用户名/邮箱/手机号）" />
+    </view>
+
+    <view class="spilt-line autofill"></view>
+
+    <view class="line height40">
+        <image class="xsmall-icon" src="../../image/icon_12.png"></image>
+        <input class="small-text small-margin middle-padding autofill" password="{{isPassword}}" placeholder-class="placeholderStyle" bindinput="bindinputPassword" value="{{password}}" auto-focus placeholder="12306密码" />
+    </view>
+
+    <view class="spilt-line autofill"></view>
+
+    <view class="line middle-margin">
+        <button class="large-text autofill" bindtap="bindtapLogin">登陆12306购票</button>
+    </view>
+</view>

@@ -1,0 +1,28 @@
+.head {
+    width: 100%;
+}
+.body {
+    position: absolute;
+    top: 80px;
+    width: 94%;
+    left: 3%;
+    border-radius: 5px;
+    background-color: white;
+    padding-top: 10px;
+}
+
+input {
+    height: 30px;
+    background-color:white;
+    font-size: 14px;
+}
+
+.sites {
+    width: 100rpx;
+    background-color: #ddd;
+}
+.special-icon{
+    height: 24px;
+    width: 24px;
+    padding: 6px;
+}

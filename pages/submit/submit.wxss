@@ -1,0 +1,8 @@
+.head{
+    width: 100%;
+    height: 150px;
+    background-color: #4169E1;
+}
+.light-background{
+    background-color:rgba(58, 120, 202, 0.623);
+}

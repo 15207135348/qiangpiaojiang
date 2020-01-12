@@ -1,0 +1,46 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/login/login",
+        "pages/dates/dates",
+        "pages/trains/trains",
+        "pages/seats/seats",
+        "pages/submit/submit",
+        "pages/order/order",
+        "pages/detail/rushing"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "抢票酱",
+        "navigationBarTextStyle": "black"
+    },
+    "plugins": {
+        "calendar": {
+            "version": "1.1.3",
+            "provider": "wx92c68dae5a8bb046"
+        }
+    },
+    "tabBar": {
+        "backgroundColor": "#efefef",
+        "color": "#808080",
+        "selectedColor": "#FFA500",
+        "borderStyle": "white",
+        "list": [
+            {
+                "selectedIconPath": "image/home_2.png",
+                "iconPath": "image/home_1.png",
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "selectedIconPath": "image/dingdan_2.png",
+                "iconPath": "image/dingdan_1.png",
+                "pagePath": "pages/order/order",
+                "text": "订单"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

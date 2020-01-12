@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container-fluid">
+    <text class="title">30天之后的票可以预约抢票，开售自动抢支持选多个日期，可大幅度提升成功率</text>
+    <view class="spilt-line"></view>
+    <view class="demo5">
+        <calendar start-date="{{startDate}}" end-date="{{endDate}}" cell-size="30" next="{{true}}" prev="{{true}}" show-more-days="{{false}}" calendar-style="demo5-calendar" header-style="demo5-header" board-style="demo5-board" weeks-type="cn" days-color="{{styles.arr[styles.i]}}"
+            active-type="square" bindnextMonth="next" bindprevMonth="prev" binddateChange="dateChange" binddayClick="dayClick" />
+    </view>
+    <view class="line large-margin">
+        <button class="large-text autofill" bindtap="bindtapOK">确定</button>
+    </view>
+</view>

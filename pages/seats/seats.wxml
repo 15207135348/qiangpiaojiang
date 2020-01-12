@@ -1,0 +1,19 @@
+<view class="container-fluid">
+
+    <view class="line large-margin">
+        <image class="middle-icon" bindtap="bindtapSwitch" mode="aspectFit" src="../../image/icon_13.png"></image>
+        <view class="small-text color-gray large-padding">您可以多选几个坐席，这样抢票成功率更高。选择后暂收最高票价，出票后视实际情况退还差额。</view>
+    </view>
+
+    <view class="spilt-line"></view>
+
+    <checkbox-group bindchange="checkboxChange">
+        <scroll-view wx:for="{{seats}}" class="large-margin large-padding">
+            <checkbox class="middle-checkbox" value="{{index}}" color="orange"/>{{item}}
+        </scroll-view>
+    </checkbox-group>
+
+    <view class="line position-bottom">
+        <button class="large-text autofill" bindtap="bindtapOK">确定</button>
+    </view>
+</view>

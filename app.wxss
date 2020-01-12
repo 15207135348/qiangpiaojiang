@@ -1,0 +1,190 @@
+/**app.wxss**/
+page {
+    background-color: #efefef;
+    font-family:'宋体', 'Times New Roman';
+}
+/*分割线样式*/
+.spilt-line{
+  background: rgb(226, 228, 223);
+  width: 100%;
+  height: 1px;
+}
+button {
+  color: white;
+  width: 100%;
+  margin: 10px;
+  background-color: orange;
+}
+.xsmall-icon{
+    height: 18px;
+    width: 18px;
+}
+.xxsmall-icon{
+    height: 16px;
+    width: 16px;
+}
+.small-icon{
+    height: 24px;
+    width: 24px;
+}
+.middle-icon{
+    height: 36px;
+    width: 36px;
+}
+.text-align-right{
+    text-align: right;
+}
+.placeholderStyle{
+  color: darkgray;
+}
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.small-width{
+    width: 30px;
+}
+.middle-width{
+    width: 70px;
+}
+.large-width{
+    width: 120px;
+}
+.xlarge-width{
+    width: 150px;
+}
+.height40{
+    height: 40px;
+}
+.height50{
+    height: 50px;
+}
+.height45{
+    height: 45px;
+}
+.height65{
+    height: 65px;
+}
+.height60{
+    height: 60px;
+}
+.height100{
+    height: 100px;
+}
+.height170{
+    height: 170px;
+}
+.small-margin{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+}
+.middle-margin{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.large-margin{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+}
+.xlarge-margin{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 7.5px;
+    margin-bottom: 7.5px;
+}
+.small-margin2{
+    margin-top: 5px;
+}
+.middle-margin2{
+    margin-top: 7.5px;
+}
+.large-margin2{
+    margin-top: 10px;
+}
+
+.small-padding{
+    padding: 2px;
+}
+.middle-padding{
+    padding: 4px;
+}
+.large-padding{
+    padding: 6px;
+}
+.xlarge-padding{
+    padding: 8px;
+}
+.xsmall-text{
+    font-size: 12px;
+}
+.small-text{
+    font-size: 13px;
+}
+.middle-text{
+    font-size: 14px;
+}
+.large-text{
+    font-size: 16px;
+}
+.xlarge-text{
+    font-size: 17px;
+}
+.xxlarge-text{
+    font-size: 20px;
+}
+
+.color-orange{
+    color: orange;
+}
+.color-white{
+    color: white;
+}
+.color-gray{
+    color: gray;
+}
+.color-lightgray{
+    color: lightgray;
+}
+.background-white {
+    background-color:white;
+}
+.background-blue {
+    background-color: #4169E1;
+}
+.autofill{
+    width: 100%;
+    flex:1;
+}
+.large-margin-top{
+    margin-top: 15px;
+}
+.large-margin-bottom{
+    margin-bottom: 15px;
+}
+.small-margin-top{
+    margin-top: 5px;
+}
+.middle-margin-top{
+    margin-top: 10px;
+}
+.middle-margin-bottom{
+    margin-bottom: 10px;
+}
+.small-margin-right{
+    margin-right: 5px;
+}
+.middle-margin-right{
+    margin-right: 10px;
+}

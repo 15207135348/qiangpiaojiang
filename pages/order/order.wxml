@@ -1,0 +1,17 @@
+<scroll-view wx:for="{{orders}}" class="container-fluid">
+    <view id="{{index}}" class="line height100 middle-margin2 background-white autofill" bindtap="bindtabLookDetail">
+        <view class="column large-padding large-margin light-background">
+            <view class="line large-width">
+                <view class="large-text autofill">{{item.from_station}}</view>
+                <image class="xsmall-icon small-margin" mode="aspectFit" src="../../image/icon_10.png"></image>
+                <view class="large-text text-align-right autofill">{{item.to_station}}</view>
+            </view>
+            <view class="small-text small-margin-top">出发日期：{{item.dates}}</view>
+            <view class="left-line small-margin-top">
+                <image class="xxxsmall-icon small-margin-right" mode="aspectFit" src="{{item.imageurl}}"></image>
+                <view class="small-text {{item.colorclass}}">{{item.status}}</view>
+            </view>
+        </view>
+        <image class="middle-icon large-padding large-margin" src="{{item.imageurl}}"></image>
+    </view>
+</scroll-view>

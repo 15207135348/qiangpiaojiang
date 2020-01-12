@@ -1,0 +1,58 @@
+<!--submit.wxml-->
+<scroll-view class="container-fluid">
+    <view class="head">
+        <view class="line large-padding">
+            <view class="column text-align-right small-margin-top">
+                <input disabled= "{{true}}" class="xlarge-text middle-width color-white" value="{{from_station}}"></input>
+            </view>
+            <image class="small-icon small-margin-top" src="../../image/icon_6.png"></image>
+            <view class="column small-margin-top">
+                <input disabled= "{{true}}" class="xlarge-text middle-width color-white" value="{{to_station}}"></input>
+            </view>
+        </view>
+
+        <view class="column xlarge-padding large-margin light-background">
+            <view class="line">
+                <view class="small-text middle-width color-lightgray">抢票车次</view>
+                <input disabled= "{{true}}" class="small-text color-white autofill" value="{{trains}}"></input>
+            </view>
+            <view class="line">
+                <view class="small-text middle-width color-lightgray">抢票坐席</view>
+                <input disabled= "{{true}}" class="small-text color-white autofill" value="{{seats}}"></input>
+            </view>
+            <view class="line">
+                <view class="small-text middle-width color-lightgray">出发日期</view>
+                <input disabled= "{{true}}" class="small-text color-white autofill" value="{{dates}}"></input>
+            </view>
+        </view>
+    </view>
+    <view class="body">
+        <view class="line height65 middle-margin2 background-white autofill" bindtap="bindtabLogin12306">
+            <image class="small-icon middle-margin" src="../../image/icon_5.png"></image>
+            <view class="column autofill">
+                <input disabled= "{{true}}" class="small-text" value="{{account_of12306}}"></input>
+                <input disabled= "{{true}}" class="small-text color-gray" value="{{text}}"></input>
+            </view>
+            <image class="xsmall-icon middle-margin" src="../../image/icon_4.png"></image>
+        </view>
+        <view class="line height45 middle-margin2 background-white autofill" bindtap="bindtabPeople">
+            <view class="small-text middle-width color-gray middle-margin">添加乘客</view>
+            <input disabled= "{{false}}" class="small-text autofill" bindinput="bindinputPeople" value="{{people}}" placeholder-class="placeholderStyle" placeholder="格式:张三/李四"></input>
+            <image class="xsmall-icon middle-margin" src="../../image/icon_4.png"></image>
+        </view>
+        <view class="line height45 middle-margin2 background-white autofill">
+            <view class="small-text middle-width color-gray middle-margin">联系方式</view>
+            <input class="small-text autofill" value="{{contact_info}}" bindinput="bindinputContactInfo" placeholder-class="placeholderStyle" placeholder="手机号或者邮箱"></input>
+        </view>
+        <view class="line height45 middle-margin2 background-white autofill" bindtap="bindtabPayType">
+            <view class="small-text middle-width color-gray middle-margin">付款方式</view>
+            <input disabled= "{{true}}" class="small-text autofill" value="{{pay_type.arr[pay_type.i]}}"></input>
+            <image class="xsmall-icon middle-margin" src="../../image/icon_4.png"></image>
+        </view>
+        <view class="line middle-margin">
+            <button class="large-text autofill" bindtap="bindtapSubmit">提交订单</button>
+        </view>
+
+    </view>
+    
+</scroll-view>

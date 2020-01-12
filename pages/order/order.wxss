@@ -1,0 +1,22 @@
+.left-line {
+    display: flex;
+    align-items: center;
+}
+.xxxsmall-icon{
+    height: 14px;
+    width: 14px;
+}
+.success-color{
+    color: rgb(17, 165, 17);
+}
+.running-color{
+    color: #1296db;
+}
+.error-color{
+    color: gray;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

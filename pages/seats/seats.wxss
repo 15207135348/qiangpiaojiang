@@ -1,0 +1,9 @@
+page{
+    background-color: white;
+}
+.position-bottom{
+    width: 90%;
+    left: 5%;
+    position: fixed; 
+    bottom: 0px;
+}

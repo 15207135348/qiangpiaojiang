@@ -1,0 +1,39 @@
+<view class='container-fluid'>
+    <view class="line background-blue height50">
+        <view class="line large-margin-left">
+            <checkbox class="small-checkbox" color="#4169E1" value="1" checked="{{checked1}}"/>
+            <view class="small-text color-white">从早到晚</view>
+        </view>
+        <view class="line large-margin-right">
+            <checkbox class="small-checkbox" calss="xsmall-icon" color="#4169E1" value="2" checked="{{checked2}}"/>
+            <view class="small-text color-white">高铁动车</view>
+        </view>
+
+    </view>
+
+    <checkbox-group bindchange="checkboxChange">
+        <scroll-view wx:for="{{trains}}" class="background-white">
+            <view class="line xlarge-margin">
+                <view class="column">
+                    <view class="xlarge-text middle-padding">{{item.start_time}}</view>
+                    <view class="small-text color-gray middle-padding">{{item.from_station}}</view>
+                </view>
+                <view class="column center">
+                    <view class="small-text color-gray middle-padding">{{item.train}}</view>
+                    <image src="../../image/icon_10.png"></image>
+                    <view class="small-text color-gray middle-padding">{{item.duration}}</view>
+                </view>
+                <view class="column right">
+                    <view class="xlarge-text middle-padding">{{item.end_time}}</view>
+                    <view class="small-text color-gray middle-padding">{{item.to_station}}</view>
+                </view>
+                <!-- <view class="large-test color-orange">{{item.prices}}</view> -->
+                <checkbox class="middle-checkbox" value="{{index}}" color="orange"/>
+            </view>
+            <view class="spilt-line"></view>
+            <view class="line position-bottom">
+                <button class="large-text autofill" bindtap="bindtapOK">确定</button>
+            </view>
+        </scroll-view>
+    </checkbox-group>
+</view>
