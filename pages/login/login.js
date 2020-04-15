@@ -8,62 +8,15 @@ Page({
     data: {
         username: "",
         password: "",
-        isPassword: true
+        isPassword: true,
+        eye_image_url: "../../image/icon_21.png",
+        agree:true,
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide: function () {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload: function () {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh: function () {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom: function () {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage: function () {
 
     },
 
@@ -80,10 +33,71 @@ Page({
         });
         console.log(e.detail.value);
     },
+    bindtapEye: function(e) {
+        
+        if(this.data.isPassword){
+            this.setData({
+                isPassword:false,
+                eye_image_url:"../../image/icon_20.png"
+            })
+        }else{
+            this.setData({
+                isPassword:true,
+                eye_image_url:"../../image/icon_21.png"
+            })
+        }
+    },
+    bindtapShowProtocol: function(e){
+        wx.navigateTo({
+          url: 'userprotocol',
+        })
+    },
+    checkboxChange: function(e) {
+        var agree = (e.detail.value.length == 1)
+        console.log(agree)
+        this.setData({
+            agree: agree
+        })
+    },
+
     bindtapLogin: function(e){
-        console.log(e);
         console.log(this.data.username);
         console.log(this.data.password);
+        console.log(this.data.agree);
+
+        if(this.data.username == ""){
+            wx.showModal({
+                content: '请输入12306账号',
+                showCancel: false,
+                success (res) {
+                    console.log('用户点击确定')
+                }
+            })
+            return;
+        }
+
+        if(this.data.password == ""){
+            wx.showModal({
+                content: '请输入12306密码',
+                showCancel: false,
+                success (res) {
+                    console.log('用户点击确定')
+                }
+            })
+            return;
+        }
+
+        if(!this.data.agree){
+            wx.showModal({
+                content: '请同意条款',
+                showCancel: false,
+                success (res) {
+                    console.log('用户点击确定')
+                }
+            })
+            return;
+        }
+
         wx.showLoading({
             title: '登陆中'
         })
@@ -117,7 +131,7 @@ Page({
                     success (res) {
                         console.log('用户点击确定')
                     }
-                  })
+                })
             }
         })
     }

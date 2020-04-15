@@ -1,0 +1,15 @@
+page{
+    background-color: white;
+}
+.position-bottom{
+    width: 90%;
+    left: 5%;
+    position: fixed; 
+    bottom: 0px;
+}
+.line {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: left;
+}

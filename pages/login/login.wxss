@@ -1,3 +1,14 @@
 page {
     background-color: white;
 }
+
+.line-left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.margin-left-right{
+    margin-left: 10px;
+    margin-right: 10px;
+}

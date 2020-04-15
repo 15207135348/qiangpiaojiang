@@ -1,10 +1,14 @@
-<scroll-view wx:for="{{orders}}" class="container-fluid">
+<view class="{{background}}">
+    <image class="large-icon" src="../../image/icon_24.png"></image>
+    <view class="middle-text">您当前没有相关订单~</view>
+</view>
+<scroll-view wx:for="{{orders}}" wx:key="*this" class="container-fluid">
     <view id="{{index}}" class="line height100 middle-margin2 background-white autofill" bindtap="bindtabLookDetail">
         <view class="column large-padding large-margin light-background">
-            <view class="line large-width">
-                <view class="large-text autofill">{{item.from_station}}</view>
+            <view class="line xlarge-width">
+                <view class="large-text autofill">{{item.fromStation}}</view>
                 <image class="xsmall-icon small-margin" mode="aspectFit" src="../../image/icon_10.png"></image>
-                <view class="large-text text-align-right autofill">{{item.to_station}}</view>
+                <view class="large-text text-align-right autofill">{{item.toStation}}</view>
             </view>
             <view class="small-text small-margin-top">出发日期：{{item.dates}}</view>
             <view class="left-line small-margin-top">

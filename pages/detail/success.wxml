@@ -1,0 +1,58 @@
+<!--pages/detail/success.wxml-->
+<view class='container-fluid'>
+	<view class="background-blue height70 line-left">
+        <image class="middle-icon large-padding" src="../../image/icon_7.png"></image>
+		<view class="large-text color-white middle-margin">抢票成功</view>
+	</view>
+	<view class="column large-padding middle-margin light-background">
+
+		<view class="line-left small-padding background-white">
+			<view class="middle-text middle-padding color-gray">取票号:</view>
+			<view class="middle-text middle-padding">{{res.sequenceNo}}</view>
+		</view>
+
+        <view class="line small-padding background-lightblue">
+            <view class="column">
+                <view class="middle-text color-gray middle-padding">{{res.fromDate}}</view>
+                <view class="xlarge-text middle-padding">{{res.fromTime}}</view>
+                <view class="middle-text color-gray middle-padding">{{res.fromStation}}站</view>
+            </view>
+            <view class="column center">
+                <view class="middle-text color-gray middle-padding">{{res.trainCode}}时刻表></view>
+                <view class="middle-text color-gray middle-padding">{{res.duration}}</view>
+            </view>
+            <view class="column right">
+                <view class="middle-text color-gray middle-padding">{{res.toDate}}</view>
+                <view class="xlarge-text middle-padding">{{res.toTime}}</view>
+                <view class="middle-text color-gray middle-padding">{{res.toStation}}站</view>
+            </view>
+        </view>
+        
+        <scroll-view wx:for="{{res.tickets}}" class="background-white">
+            <view class="line small-padding">
+                <view class="column">
+                    <view class="line-left">
+                        <view class="large-text middle-padding">{{item.passengerName}}</view>
+                        <view class="small-text middle-padding color-gray">{{item.ticketType}}</view>
+                    </view>
+                    <view class="small-text middle-padding color-gray">{{item.passengerId}}</view>
+                </view>
+               <view class="column">
+                    <view class="line">
+                        <view class="middle-text middle-padding">{{item.seatType}}</view>
+                        <view class="middle-text middle-padding">¥{{item.price}}</view>
+                    </view>
+                    <view class="line">
+                        <view class="middle-text middle-padding">{{item.coach}}车厢{{item.seat}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="spilt-line"></view>
+        </scroll-view>
+
+        <view class="line middle-margin">
+            <button class="large-text autofill" bindtap="deleteOrder">删除订单</button>
+        </view>
+	</view>
+</view>
+

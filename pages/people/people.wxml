@@ -1,0 +1,32 @@
+<view class='container-fluid'>
+
+    <view class="line large-margin">
+        <image class="xsmall-icon" mode="aspectFit" src="../../image/icon_13.png"></image>
+        <view class="small-text color-gray large-padding">如果需要添加新的乘车人，请前往12306添加！</view>
+    </view>
+    <view class="spilt-line"></view>
+
+    <checkbox-group bindchange="checkboxChange">
+        <scroll-view wx:for="{{people}}" class="background-white">
+            <view class="line small-margin">
+                <checkbox class="middle-checkbox middle-margin" value="{{index}}" color="orange"/>
+                <view class="column">
+                    <view class="line">
+                        <view class="xlarge-text middle-padding">{{item.name}}</view>
+                        <view class="small-text color-gray middle-padding">{{item.type}}</view>
+                        <view class="small-text color-orange middle-padding">{{item.tip}}</view>
+                    </view>
+                   <view class="line">
+                        <view class="small-text color-gray middle-padding">{{item.idType}}</view>
+                        <view class="small-text color-gray middle-padding">{{item.idNo}}</view>
+                    </view>
+                </view>
+            </view>
+            <view class="spilt-line"></view>
+        </scroll-view>
+        <view class="height100"></view>
+        <view class="line position-bottom">
+            <button class="large-text autofill" bindtap="bindtapOK">确定</button>
+        </view>
+    </checkbox-group>
+</view>

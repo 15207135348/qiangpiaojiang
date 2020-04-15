@@ -22,15 +22,24 @@ image{
 .large-margin-right{
     margin-right: 15%;
 }
-.small-checkbox{
-    transform: scale(0.6,0.6);
-}
-.middle-checkbox{
-    transform: scale(0.7,0.7);
-}
 .position-bottom{
     width: 90%;
     left: 5%;
     position: fixed; 
     bottom: 0px;
+}
+.margin-left20{
+    margin-left: 20px;
+}
+.margin-right20{
+    margin-right: 20px;
+}
+.margin-top7{
+    margin-top: 7.5px;
+}
+.margin-bottom7{
+    margin-bottom: 7.5px;
+}
+.margin-right6{
+    margin-right: 6px;
 }

@@ -1,40 +1,31 @@
 <view class='container-fluid'>
 	<view class="center background-blue height150">
-		<!-- <image class="cycle" src="../../image/icon_16.png">
-		</image> -->
-		<text class="text-cycle">  
-      		<text class="middle-text color-white text_num">{{count}}</text>
-	  	</text>
-		
-		<view class="middle-text color-white">我们已为您抢票{{count}}次啦</view>
-		<view class="small-text color-lightgray">抢票截止时间{{end_time}}，抢到票后将提醒您在30分钟内支付，超时将自动取消订单，请确保及时支付</view>
+		<view class="large-text color-white cycle-backgroud middle-margin">{{order.queryCount}}</view>
+		<view class="middle-text color-white middle-margin">我们已为您抢票{{order.queryCount}}次啦</view>
+		<view class="small-text color-lightgray small-margin">抢票截止时间{{order.expireTime}}，抢到票后将提醒您在25分钟内支付，超时将自动取消订单，请确保及时支付!</view>
 	</view>
 	<view class="column xlarge-padding large-margin light-background">
-		<view class="line">
-			<view class="small-text middle-width color-gray">行程</view>
-			<view class="small-text">{{order.from_station}}-{{to_station}}</view>
+		<view class="line small-margin-top">
+			<view class="middle-text middle-width color-gray">行程</view>
+			<view class="middle-text">{{order.fromStation}}-{{order.toStation}}</view>
 		</view>
-		<view class="line">
-			<view class="small-text middle-width color-gray">日期</view>
-			<view class="small-text">{{order.dates}}</view>
+		<view class="line small-margin-top">
+			<view class="middle-text middle-width color-gray">日期</view>
+			<view class="middle-text">{{order.dates}}</view>
 		</view>
-		<view class="line">
-			<view class="small-text middle-width color-gray">乘客</view>
-			<view class="small-text">{{order.people}}</view>
+		<view class="line small-margin-top">
+			<view class="middle-text middle-width color-gray">乘客</view>
+			<view class="middle-text">{{order.people}}</view>
 		</view>
-		<view class="line">
-			<view class="small-text middle-width color-gray">车次</view>
-			<view class="small-text">{{order.trains}}</view>
+		<view class="line small-margin-top">
+			<view class="middle-text middle-width color-gray">车次</view>
+			<view class="middle-text">{{order.trains}}</view>
 		</view>
-        <view class="line">
-			<view class="small-text middle-width color-gray">坐席</view>
-			<view class="small-text">{{order.seats}}</view>
+        <view class="line small-margin-top">
+			<view class="middle-text middle-width color-gray">坐席</view>
+			<view class="middle-text">{{order.seats}}</view>
 		</view>
-        <view class="line">
-			<view class="small-text middle-width color-gray">抢票号</view>
-			<view class="small-text">{{order.order_id}}</view>
-		</view>
-        <view class="line middle-margin">
+        <view class="line large-margin">
             <button class="large-text autofill" bindtap="bindtapCancelOrder">取消订单</button>
         </view>
 	</view>

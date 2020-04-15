@@ -1,0 +1,34 @@
+<!--pages/detail/cancelled.wxml-->
+<view class='container-fluid'>
+	<view class="center background-blue height150">
+        <image class="large-icon large-padding large-margin-top" src="../../image/icon_18.png"></image>
+		<view class="large-text color-white middle-margin">已取消</view>
+		<view class="small-text color-lightgray middle-margin">您的订单已取消，欢迎再次使用</view>
+	</view>
+	<view class="column xlarge-padding large-margin light-background">
+		<view class="line small-margin-top">
+			<view class="middle-text middle-width color-gray">行程</view>
+			<view class="middle-text">{{order.fromStation}}-{{order.toStation}}</view>
+		</view>
+		<view class="line small-margin-top">
+			<view class="middle-text middle-width color-gray">日期</view>
+			<view class="middle-text">{{order.dates}}</view>
+		</view>
+		<view class="line small-margin-top">
+			<view class="middle-text middle-width color-gray">乘客</view>
+			<view class="middle-text">{{order.people}}</view>
+		</view>
+		<view class="line small-margin-top">
+			<view class="middle-text middle-width color-gray">车次</view>
+			<view class="middle-text">{{order.trains}}</view>
+		</view>
+        <view class="line small-margin-top">
+			<view class="middle-text middle-width color-gray">坐席</view>
+			<view class="middle-text">{{order.seats}}</view>
+		</view>
+        <view class="line large-margin">
+            <button class="large-text autofill" bindtap="deleteOrder">删除订单</button>
+        </view>
+	</view>
+</view>
+

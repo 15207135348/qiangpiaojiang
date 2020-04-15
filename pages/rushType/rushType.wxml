@@ -1,0 +1,22 @@
+<!--pages/rushType/rushType.wxml-->
+<view class='container-fluid'>
+    <view class="line large-margin">
+        <image class="xsmall-icon" mode="aspectFit" src="../../image/icon_13.png"></image>
+        <view class="small-text color-gray large-padding">同时选择两种即为双通道抢票</view>
+    </view>
+
+    <view class="spilt-line"></view>
+
+    <checkbox-group bindchange="checkboxChange">
+        <scroll-view wx:for="{{rushTypes}}" class="background-white">
+            <view class="line small-margin">
+                <checkbox class="middle-checkbox middle-margin" value="{{index}}" color="orange"/>
+                <view class="xlarge-text middle-padding">{{item}}</view>
+            </view>
+        </scroll-view>
+        <view class="height100"></view>
+        <view class="line position-bottom">
+            <button class="large-text autofill" bindtap="bindtapOK">确定</button>
+        </view>
+    </checkbox-group>
+</view>

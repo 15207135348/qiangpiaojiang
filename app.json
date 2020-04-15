@@ -7,10 +7,18 @@
         "pages/seats/seats",
         "pages/submit/submit",
         "pages/order/order",
-        "pages/detail/rushing"
+        "pages/detail/rushing",
+        "pages/station/station",
+        "pages/people/people",
+        "pages/detail/success",
+        "pages/detail/failed",
+        "pages/detail/cancelled",
+        "pages/login/userprotocol",
+        "pages/rushType/rushType",
+        "pages/detail/an_success"
     ],
     "window": {
-        "backgroundTextStyle": "light",
+        "backgroundTextStyle": "dark",
         "navigationBarBackgroundColor": "#fff",
         "navigationBarTitleText": "抢票酱",
         "navigationBarTextStyle": "black"

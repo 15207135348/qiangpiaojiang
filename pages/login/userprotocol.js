@@ -1,4 +1,4 @@
-// pages/status/rushing.js
+// pages/login/userprotocol.js
 Page({
 
     /**

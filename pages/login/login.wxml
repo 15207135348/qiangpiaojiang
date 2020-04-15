@@ -1,20 +1,28 @@
 <!--pages/login/login.wxml-->
 <view class="container-fluid large-margin">
-    <view class="line height40">
+    <view class="line height50">
         <image class="xsmall-icon" src="../../image/icon_11.png"></image>
-        <input class="small-text small-margin middle-padding autofill" placeholder-class="placeholderStyle" bindinput="bindinputUsername" value="{{username}}" auto-focus placeholder="12306账号（用户名/邮箱/手机号）" />
+        <input class="middle-text small-margin middle-padding autofill" placeholder-class="placeholderStyle" bindinput="bindinputUsername" value="{{username}}" auto-focus placeholder="12306账号（用户名/邮箱/手机号）" />
     </view>
 
     <view class="spilt-line autofill"></view>
 
-    <view class="line height40">
+    <view class="line height50">
         <image class="xsmall-icon" src="../../image/icon_12.png"></image>
-        <input class="small-text small-margin middle-padding autofill" password="{{isPassword}}" placeholder-class="placeholderStyle" bindinput="bindinputPassword" value="{{password}}" auto-focus placeholder="12306密码" />
+        <input class="middle-text small-margin middle-padding autofill" password="{{isPassword}}" placeholder-class="placeholderStyle" bindinput="bindinputPassword" value="{{password}}" auto-focus placeholder="12306密码" />
+        <image class="xsmall-icon" src="{{eye_image_url}}" bindtap="bindtapEye"></image>
     </view>
-
     <view class="spilt-line autofill"></view>
 
-    <view class="line middle-margin">
+    <checkbox-group bindchange="checkboxChange">
+        <view class="line-left height50">
+            <checkbox class="middle-checkbox" value="agree" color="orange" checked="true"/>
+            <text class="color-gray middle-text">同意</text>
+            <text class="middle-text" bindtap="bindtapShowProtocol">《账户授权协议》</text>
+        </view>
+    </checkbox-group>
+
+    <view class="line margin-left-right">
         <button class="large-text autofill" bindtap="bindtapLogin">登陆12306购票</button>
     </view>
 </view>

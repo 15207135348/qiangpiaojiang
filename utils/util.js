@@ -1,3 +1,4 @@
+var config = require('../config.js');
 var dateFormat = function (fmt, date) {
     let ret;
     let opt = {
@@ -113,6 +114,7 @@ var get = function (url, data, success) {
     })
     return reqObj;
 }
+
 /**
  * @description 静态日期操作类，封装系列日期操作方法
  * @description 输入时候月份自动减一，输出时候自动加一

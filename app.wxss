@@ -31,6 +31,10 @@ button {
     height: 36px;
     width: 36px;
 }
+.large-icon{
+    height: 50px;
+    width: 50px;
+}
 .text-align-right{
     text-align: right;
 }
@@ -40,6 +44,10 @@ button {
 .line {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.left-line {
+    display: flex;
     align-items: center;
 }
 .column {
@@ -70,6 +78,9 @@ button {
 }
 .height65{
     height: 65px;
+}
+.height80{
+    height: 80px;
 }
 .height60{
     height: 60px;
@@ -157,6 +168,9 @@ button {
 .color-lightgray{
     color: lightgray;
 }
+.color-darkgray{
+    color: darkgray;
+}
 .background-white {
     background-color:white;
 }
@@ -187,4 +201,10 @@ button {
 }
 .middle-margin-right{
     margin-right: 10px;
+}
+.small-checkbox{
+    transform: scale(0.8,0.8);
+}
+.middle-checkbox{
+    transform: scale(1,1);
 }

@@ -4,13 +4,6 @@ Page({
      * 页面的初始数据
      */
     data: {
-        trains: "",
-        total_seats: {
-            K: ["无座", "硬座", "硬卧", "软卧"],
-            G: ["二等座", "一等座", "商务座"],
-            Z: ["无座", "硬座", "硬卧", "软卧", "高级软卧"],
-            T: ["无座", "硬座", "软座"]
-        },
         seats: [],
         checks: []
     },
@@ -24,11 +17,17 @@ Page({
         const eventChannel = this.getOpenerEventChannel();
         eventChannel.on('data', function (data) {
             console.log("seats页面收到了index页面的参数")
+            let totalSeats = data.totalSeats
             console.log(data)
+            console.log(totalSeats)            
+            let list = []
+            for (var key in totalSeats) {
+                list.push(key)
+            }
+            console.log(list)
             that.setData({
-                trains: data.trains
-            });
-            console.log("seats设置参数成功")
+                seats: list
+            })
         })
     },
 
@@ -44,24 +43,24 @@ Page({
      */
     onShow: function () {
 
-        console.log("seats页面的onShow函数")
-        let trains = this.data.trains.split("/");
-        console.log(trains)
-        let map = {};
-        for (var i = 0; i < trains.length; ++i) {
-            let seats = this.data.total_seats[trains[i].substring(0, 1)];
-            for (var j = 0; j < seats.length; ++j) {
-                map[seats[j]] = true;
-            }
-        }
-        let list = []
-        for (var key in map) {
-            list.push(key)
-        }
-        console.log(list)
-        this.setData({
-            seats: list
-        })
+        // console.log("seats页面的onShow函数")
+        // let trains = this.data.trains.split("/");
+        // console.log(trains)
+        // let map = {};
+        // for (var i = 0; i < trains.length; ++i) {
+        //     let seats = this.data.totalSeats[trains[i].substring(0, 1)];
+        //     for (var j = 0; j < seats.length; ++j) {
+        //         map[seats[j]] = true;
+        //     }
+        // }
+        // let list = []
+        // for (var key in map) {
+        //     list.push(key)
+        // }
+        // console.log(list)
+        // this.setData({
+        //     seats: list
+        // })
     },
 
     checkboxChange: function (e) {
@@ -76,22 +75,22 @@ Page({
         console.log('选择的座位的序号' + this.data.checks)
         let checks = this.data.checks
         let seats = this.data.seats
-        let selected_seats = []
+        let selectedSeats = []
         for(var i = 0; i < checks.length; ++i)
         {
             let index = Number(checks[i])
-            let selected_seat = seats[index]
-            selected_seats.push(selected_seat)
+            let selectedSeat = seats[index]
+            selectedSeats.push(selectedSeat)
         }
         console.log("选择的座位:")
-        console.log(selected_seats)
+        console.log(selectedSeats)
 
         console.log("seats页面跳回index页面")
         let eventChannel = this.getOpenerEventChannel();
         wx.navigateBack({
             delta: 1,
             success: function (res) {
-                eventChannel.emit('okEvent', {data: selected_seats});
+                eventChannel.emit('okEvent', {data: selectedSeats});
             }
         });
     },

@@ -1,0 +1,33 @@
+/* pages/detail/success.wxss */
+.height70{
+    height: 70px;
+}
+.line-left {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.line-right {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.small-padding{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.background-lightblue{
+    background-color: lightblue;
+}
+.center{
+    align-items: center;
+}

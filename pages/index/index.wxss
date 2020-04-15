@@ -3,7 +3,7 @@
 }
 .body {
     position: absolute;
-    top: 80px;
+    top: 110px;
     width: 94%;
     left: 3%;
     border-radius: 5px;

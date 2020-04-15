@@ -1,7 +1,7 @@
 {
-    "usingComponents": {},
-    "navigationBarBackgroundColor": "#4169E1",
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "订单填写",
-    "backgroundTextStyle": "light"
-  }
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#4169E1",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "订单填写",
+  "backgroundTextStyle": "light"
+}

@@ -5,10 +5,6 @@ App({
         userInfo: null
     },
     onLaunch: function () {
-        // 展示本地存储能力
-        var logs = wx.getStorageSync('logs') || []
-        logs.unshift(Date.now())
-        wx.setStorageSync('logs', logs)
         // 获取用户信息
         wx.getSetting({
             success: res => {
@@ -19,29 +15,6 @@ App({
                             // 可以将 res 发送给后台解码出 unionId
                             console.log(res.userInfo)
                             this.globalData.userInfo = res.userInfo
-                            let nickname = res.userInfo.nickName
-                            let gender = res.userInfo.gender
-                            let country = res.userInfo.country
-                            let province = res.userInfo.province
-                            let city = res.userInfo.city
-                            // 登录
-                            wx.login({
-                                success: res => {
-                                    // 发送 res.code 到后台换取 openId, sessionKey, unionId
-                                    config.get(config.urls.LOGIN_WX_URL, {
-                                            code: res.code,
-                                            nickname: nickname,
-                                            gender: gender,
-                                            country: country,
-                                            province: province,
-                                            city: city
-                                        },
-                                        function (res) {
-                                            console.log(res.data.message);
-                                        }
-                                    )
-                                }
-                            })
                             // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
                             // 所以此处加入 callback 以防止这种情况
                             if (this.userInfoReadyCallback) {
@@ -50,19 +23,6 @@ App({
                         }
                     })
                 }
-            }
-        })
-        // 登录
-        wx.login({
-            success: res => {
-                // 发送 res.code 到后台换取 openId, sessionKey, unionId
-                config.get(config.urls.LOGIN_WX_URL, {
-                        code: res.code
-                    },
-                    function (res) {
-                        console.log(res.data.message);
-                    }
-                )
             }
         })
     }

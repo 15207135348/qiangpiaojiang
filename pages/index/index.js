@@ -1,59 +1,93 @@
 //index.js
 //获取应用实例
 var util = require('../../utils/util.js');
+var config = require('../../config.js');
 const app = getApp()
 Page({
     data: {
-        from_station: "",
-        to_station: "",
+        fromStation: "",
+        toStation: "",
         dates: "",
         trains: "",
-        seats: ""
+        seats: "",
+        totalSeats:{}
     },
     onLoad: function (options) {
-        let from_station = wx.getStorageSync('from_station')
-        let to_station = wx.getStorageSync('to_station')
+        let fromStation = wx.getStorageSync('fromStation')
+        let toStation = wx.getStorageSync('toStation')
         let dates = wx.getStorageSync('dates')
         this.setData({
-            from_station: from_station,
-            to_station: to_station,
+            fromStation: fromStation,
+            toStation: toStation,
             dates: dates
-
+        })
+        //登陆一下
+        wx.login({
+            success: res => {
+                // 发送 res.code 到后台换取 openId, sessionKey, unionId
+                config.get(config.urls.LOGIN_WX_URL, {
+                        code: res.code
+                    },
+                    function (res) {
+                        console.log(res.data.message);
+                    }
+                )
+            }
         })
     },
+
     bindtapFromStation: function (e) {
         console.log("bindtapFromStation");
+        let that = this;
+        wx.navigateTo({
+            url: '../station/station',
+            events: {
+                // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+                okEvent: function (res) {
+                    console.log(res);
+                    that.setData({
+                        fromStation: res.data,
+                    });
+                    wx.setStorageSync('fromStation', res.data)
+                    console.log("station页面返回参数:" + res.data)
+                }
+            }
+        })
     },
-    bindinputFromStation: function (e) {
-        this.setData({
-            from_station: e.detail.value
-        });
-        console.log(e.detail.value)
-        wx.setStorageSync('from_station', e.detail.value)
-    },
+
     bindtapToStation: function (e) {
+
         console.log("bindtapToStation");
-    },
-    bindinputToStation: function (e) {
-        this.setData({
-            to_station: e.detail.value
-        });
-        console.log(e.detail.value)
-        wx.setStorageSync('to_station', e.detail.value)
+
+        let that = this;
+        wx.navigateTo({
+            url: '../station/station',
+            events: {
+                // 为指定事件添加一个监听器，获取被打开页面传送到当前页面的数据
+                okEvent: function (res) {
+                    console.log(res);
+                    that.setData({
+                        toStation: res.data,
+                    });
+                    wx.setStorageSync('toStation', res.data)
+                    console.log("station页面返回参数:" + res.data)
+                }
+            }
+        })
     },
     bindtapSwitch: function (e) {
         console.log("bindtapSwitch")
-        let temp = this.data.from_station
+        let temp = this.data.fromStation
         this.setData({
-            from_station: this.data.to_station,
-            to_station: temp
+            fromStation: this.data.toStation,
+            toStation: temp
         });
         this.setData({
             trains: "",
             seats: ""
         });
-        wx.setStorageSync('from_station', this.data.from_station)
-        wx.setStorageSync('to_station', this.data.to_station)
+        wx.setStorageSync('fromStation', this.data.fromStation)
+        wx.setStorageSync('toStation', this.data.toStation)
     },
     bindtapDates: function (e) {
         let that = this;
@@ -74,7 +108,7 @@ Page({
     },
     bindtapTrains: function (e) {
         console.log("在index的bindtapTrains函数中")
-        if (this.data.from_station == "") {
+        if (this.data.fromStation == "") {
             wx.showModal({
                 title: '请先选择起始站',
                 showCancel: false,
@@ -84,7 +118,7 @@ Page({
             })
             return
         }
-        if (this.data.to_station == "") {
+        if (this.data.toStation == "") {
             wx.showModal({
                 title: '请先选择终点站',
                 showCancel: false,
@@ -112,17 +146,20 @@ Page({
                 okEvent: function (res) {
                     console.log("trains页面跳回index页面，返回结果")
                     console.log(res);
-                    let str = util.arrJoin(res.data, "/");
+                    let str = util.arrJoin(res.data.selectedTrains, "/");
+                    let totalSeats = res.data.totalSeats;
                     that.setData({
                         trains: str,
+                        totalSeats: totalSeats
                     });
+
                 }
             },
             success: function (res) {
                 // 通过eventChannel向被打开页面传送数据
                 let data = {
-                    from_station: that.data.from_station,
-                    to_station: that.data.to_station,
+                    fromStation: that.data.fromStation,
+                    toStation: that.data.toStation,
                     dates: that.data.dates
                 }
                 res.eventChannel.emit('data', data);
@@ -133,7 +170,7 @@ Page({
     },
     bindtapSeats: function (e) {
         console.log("bindtapSeats");
-        if (this.data.from_station == "") {
+        if (this.data.fromStation == "") {
             wx.showModal({
                 title: '请先选择起始站',
                 showCancel: false,
@@ -143,7 +180,7 @@ Page({
             })
             return
         }
-        if (this.data.to_station == "") {
+        if (this.data.toStation == "") {
             wx.showModal({
                 title: '请先选择终点站',
                 showCancel: false,
@@ -189,7 +226,7 @@ Page({
             success: function (res) {
                 // 通过eventChannel向被打开页面传送数据
                 let data = {
-                    trains: that.data.trains,
+                    totalSeats: that.data.totalSeats
                 }
                 res.eventChannel.emit('data', data);
                 console.log("index页面跳转seats页面，传递参数")
@@ -202,7 +239,7 @@ Page({
 
         var data = this.data;
 
-        if (data.from_station == "") {
+        if (data.fromStation == "") {
             wx.showModal({
                 title: '请先选择起始站',
                 showCancel: false,
@@ -212,7 +249,7 @@ Page({
             })
             return
         }
-        if (data.to_station == "") {
+        if (data.toStation == "") {
             wx.showModal({
                 title: '请先选择终点站',
                 showCancel: false,
@@ -253,8 +290,8 @@ Page({
             return
         }
 
-        wx.setStorageSync('from_station', this.data.from_station)
-        wx.setStorageSync('to_station', this.data.to_station)
+        wx.setStorageSync('fromStation', this.data.fromStation)
+        wx.setStorageSync('toStation', this.data.toStation)
         wx.setStorageSync('dates', this.data.dates)
 
         wx.navigateTo({

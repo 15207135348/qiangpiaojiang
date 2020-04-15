@@ -1,0 +1,10 @@
+/* pages/login/userprotocol.wxss */
+page {
+    background-color: white;
+}
+.margin15{
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}

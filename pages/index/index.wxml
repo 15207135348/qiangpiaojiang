@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="container-fluid">
-    <image class="head" mode="widthFix" src="../../image/icon_2.jpeg"></image>
+    <image class="head" mode="widthFix" src="../../image/icon_22.jpg"></image>
     <view class="body">
         <!-- 出发站和到达站 -->
         <view class="line middle-margin">
@@ -8,9 +8,9 @@
             <view class="xsmall-text color-lightgray middle-padding"> 到达站 </view>
         </view>
         <view class="line middle-margin">
-            <input class="large-text middle-padding autofill" placeholder-class="placeholderStyle" bindtap="bindtapFromStation" bindinput="bindinputFromStation" value="{{from_station}}" auto-focus placeholder="城市名" />
+            <input disabled="true" class="large-text middle-padding autofill" placeholder-class="placeholderStyle" bindtap="bindtapFromStation" value="{{fromStation}}" auto-focus placeholder="城市/车站名" />
             <image class="special-icon" bindtap="bindtapSwitch" mode="aspectFit" src="../../image/icon_1.png"></image>
-            <input class="large-text middle-padding text-align-right autofill" placeholder-class="placeholderStyle" bindtap="bindtapToStation" bindinput="bindinputToStation" value="{{to_station}}" auto-focus placeholder="城市名" />
+            <input disabled="true" class="large-text middle-padding text-align-right autofill" placeholder-class="placeholderStyle" bindtap="bindtapToStation" value="{{toStation}}" auto-focus placeholder="城市/车站名" />
         </view>
         <view class="spilt-line"></view>
 

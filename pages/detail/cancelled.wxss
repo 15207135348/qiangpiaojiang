@@ -1,0 +1,10 @@
+/* pages/detail/cancelled.wxss */
+.center{
+    text-align: center;
+}
+.height150{
+    height: 170px;
+}
+.large-margin-top{
+    margin-top: 20px;
+}
