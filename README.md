@@ -72,7 +72,8 @@
     *   在群文件中获取12306接口文档
 
     *   关注公众号【大数据学堂】，点击原创合集->抢票小程序，观看视频教程
+
 ![image.png](https://upload-images.jianshu.io/upload_images/12652505-bd565cd6ec07bec5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
- 
+
     *   使用【抢票酱小程序】体验最终效果
 ![image.png](https://upload-images.jianshu.io/upload_images/12652505-eb8d716baf47005f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
