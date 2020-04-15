@@ -40,17 +40,14 @@
 *   在微信开发平台上创建一个小程序，拿到小程序的AppID和AppSecret
 
 *   申请订阅消息1（用于候补抢票结果的通知）
-
-  ![image.png](https://upload-images.jianshu.io/upload_images/12652505-264590224120ec36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://upload-images.jianshu.io/upload_images/12652505-264590224120ec36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 *   申请订阅消息2（用于普通抢票结果的通知）
-
 ![image.png](https://upload-images.jianshu.io/upload_images/12652505-1440b8b7506e2ee6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 *   在微信开发平台中设置请求接口（如果没有域名、SSL证书以及公网IP，可用[mousenat](https://www.mousenat.cn/index.html)的内网穿透来一站解决所有问题）
-
 ![image.png](https://upload-images.jianshu.io/upload_images/12652505-f58acc23524c2cda.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
@@ -75,10 +72,7 @@
     *   在群文件中获取12306接口文档
 
     *   关注公众号【大数据学堂】，点击原创合集->抢票小程序，观看视频教程
-
-    ![image.png](https://upload-images.jianshu.io/upload_images/12652505-bd565cd6ec07bec5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![image.png](https://upload-images.jianshu.io/upload_images/12652505-bd565cd6ec07bec5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
  
     *   使用【抢票酱小程序】体验最终效果
-
-  ![image.png](https://upload-images.jianshu.io/upload_images/12652505-eb8d716baf47005f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
+![image.png](https://upload-images.jianshu.io/upload_images/12652505-eb8d716baf47005f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
