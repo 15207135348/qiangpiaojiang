@@ -1,0 +1,57 @@
+<!--pages/order/dualorder.wxml-->
+<!--导航条-->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<swiper class="swiper" current="{{currentTab}}" duration="200" bindchange="swiperChange">
+  <swiper-item>
+    <view class='info'>
+        <view class="{{background1}}">
+            <image class="large-icon" src="../../image/icon_24.png"></image>
+            <view class="middle-text">您当前没有相关实时订单~</view>
+        </view>
+        <scroll-view wx:for="{{orders[0]}}" wx:key="*this" class="container-fluid">
+            <view id="{{index}}" class="line height100 middle-margin2 background-white autofill" bindtap="bindtabLookDetail">
+                <view class="column large-padding large-margin light-background">
+                    <view class="line xlarge-width">
+                        <view class="large-text autofill">{{item.fromStation}}</view>
+                        <image class="xsmall-icon small-margin" mode="aspectFit" src="../../image/icon_10.png"></image>
+                        <view class="large-text text-align-right autofill">{{item.toStation}}</view>
+                    </view>
+                    <view class="small-text small-margin-top">出发日期：{{item.dates}}</view>
+                    <view class="left-line small-margin-top">
+                        <image class="xxxsmall-icon small-margin-right" mode="aspectFit" src="{{item.imageurl}}"></image>
+                        <view class="small-text {{item.colorclass}}">{{item.status}}</view>
+                    </view>
+                </view>
+                <image class="middle-icon large-padding large-margin" src="{{item.imageurl}}"></image>
+            </view>
+        </scroll-view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class='info'>
+        <view class="{{background2}}">
+            <image class="large-icon" src="../../image/icon_24.png"></image>
+            <view class="middle-text">您当前没有相关候补订单~</view>
+        </view>
+        <scroll-view wx:for="{{orders[1]}}" wx:key="*this" class="container-fluid">
+            <view id="{{index}}" class="line height100 middle-margin2 background-white autofill" bindtap="bindtabLookDetail">
+                <view class="column large-padding large-margin light-background">
+                    <view class="line xlarge-width">
+                        <view class="large-text autofill">{{item.fromStation}}</view>
+                        <image class="xsmall-icon small-margin" mode="aspectFit" src="../../image/icon_10.png"></image>
+                        <view class="large-text text-align-right autofill">{{item.toStation}}</view>
+                    </view>
+                    <view class="small-text small-margin-top">出发日期：{{item.dates}}</view>
+                    <view class="left-line small-margin-top">
+                        <image class="xxxsmall-icon small-margin-right" mode="aspectFit" src="{{item.imageurl}}"></image>
+                        <view class="small-text {{item.colorclass}}">{{item.status}}</view>
+                    </view>
+                </view>
+                <image class="middle-icon large-padding large-margin" src="{{item.imageurl}}"></image>
+            </view>
+        </scroll-view>
+    </view>
+  </swiper-item>
+</swiper>

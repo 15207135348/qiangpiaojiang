@@ -1,8 +1,7 @@
-<!--pages/detail/an_success.wxml-->
 <view class='container-fluid'>
 	<view class="background-blue height70 line-left">
-        <image class="middle-icon large-padding" src="../../image/icon_7.png"></image>
-		<view class="large-text color-white middle-margin">已完成</view>
+        <image class="middle-icon large-padding" src="../../image/icon_23.png"></image>
+		<view class="large-text color-white middle-margin">待支付</view>
 	</view>
 	<view class="column large-padding middle-margin light-background">
 		<view class="line-left small-padding background-white">
@@ -47,14 +46,14 @@
 
         <view class="line small-padding background-white">
             <view class="line-left">
-                <view class="middle-text middle-padding color-gray">已支付金额:</view>
+                <view class="middle-text middle-padding color-gray">待支付金额:</view>
                 <view class="middle-text middle-padding">¥{{res.prepayAmount}}</view>
             </view>
             <view class="middle-text middle-padding">{{res.queueInfo}}</view>
         </view>
 
         <view class="line middle-margin">
-            <button class="large-text autofill" bindtap="deleteOrder">删除订单</button>
+            <button class="large-text autofill" bindtap="cancelOrder">取消订单</button>
         </view>
 	</view>
 </view>

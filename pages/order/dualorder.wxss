@@ -1,0 +1,92 @@
+page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.navbar {
+    flex: none;
+    display: flex;
+    background: #fff;
+    font-size: 14px;
+    color: #bbbbbb;
+}
+
+.navbar .item {
+    position: relative;
+    flex: auto;
+    text-align: center;
+    line-height: 90rpx;
+}
+
+.navbar .item.active {
+    color: orange;
+}
+
+.navbar .item.active:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5rpx;
+    background: orange;
+}
+
+.swiper {
+    height: 100%
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.xxxsmall-icon {
+    height: 14px;
+    width: 14px;
+}
+
+.green {
+    color: rgb(17, 165, 17);
+}
+
+.blue {
+    color: #1296db;
+}
+
+.gray {
+    color: gray;
+}
+.red {
+    color: #d81e06;
+}
+.darkblue{
+    color: #13227a;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.large-icon {
+    height: 80px;
+    width: 80px;
+}
+
+.background-no-order {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    text-align: center;
+    color: gray;
+}
+
+.background-has-order {
+    display: none;
+}

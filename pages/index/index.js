@@ -10,17 +10,29 @@ Page({
         dates: "",
         trains: "",
         seats: "",
-        totalSeats:{}
+        totalSeats: {}
     },
+
+    GetDateStr: function (AddDayCount) {
+        var dd = new Date();
+        dd.setDate(dd.getDate() + AddDayCount); //获取AddDayCount天后的日期
+        var y = dd.getFullYear();
+        var m = dd.getMonth() + 1; //获取当前月份的日期
+        var d = dd.getDate();
+        return y + "年" + m + "月" + d + "日";
+    },
+
+
     onLoad: function (options) {
         let fromStation = wx.getStorageSync('fromStation')
         let toStation = wx.getStorageSync('toStation')
-        let dates = wx.getStorageSync('dates')
+        let dates = this.GetDateStr(1)
         this.setData({
             fromStation: fromStation,
             toStation: toStation,
             dates: dates
         })
+        
         //登陆一下
         wx.login({
             success: res => {

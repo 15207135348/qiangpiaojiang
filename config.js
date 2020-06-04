@@ -1,5 +1,6 @@
 let basePath = 'https://yangyun.picp.vip';
 // let basePath = 'https://yangyun.xiaomy.net';
+// let basePath = 'https://yangyun.xyz';
 let urls = {
     LOGIN_WX_URL: basePath + '/auth/login_wx',
     GET12306ACCOUNT_URL: basePath + '/auth/get_12306_account',

@@ -8,17 +8,18 @@ Page({
     data: {
         orders: [],
         table: {
-            抢票中: {url : "../detail/rushing", colorclass: "rushing-color", imageurl: "../../image/icon_15.png"},
-            候补抢票中:{url : "../detail/rushing", colorclass: "rushing-color", imageurl: "../../image/icon_15.png"},
-
-            抢票成功: {url : "../detail/success", colorclass: "success-color", imageurl: "../../image/icon_7.png"},
-            候补抢票成功:{url : "../detail/an_success", colorclass: "success-color", imageurl: "../../image/icon_7.png"},
 
             抢票失败: {url : "../detail/failed", colorclass: "failed-color", imageurl: "../../image/icon_14.png"},
-
             已取消: {url : "../detail/cancelled", colorclass: "cancelled-color", imageurl: "../../image/icon_18.png"},
-
             休息中:{url : "../detail/rushing", colorclass: "rushing-color", imageurl: "../../image/icon_15.png"},
+            已完成:{url : "../detail/success", colorclass: "success-color", imageurl: "../../image/icon_7.png"},
+
+            实时抢票中: {url : "../detail/rushing", colorclass: "rushing-color", imageurl: "../../image/icon_15.png"},
+            实时待支付: {url : "../detail/success", colorclass: "success-color", imageurl: "../../image/icon_7.png"},
+            
+            候补抢票中:{url : "../detail/rushing", colorclass: "rushing-color", imageurl: "../../image/icon_15.png"},
+            候补待支付:{url : "../detail/an_success", colorclass: "success-color", imageurl: "../../image/icon_7.png"},
+            待兑现:{url : "../detail/an_success", colorclass: "success-color", imageurl: "../../image/icon_7.png"},
         },
         background: "background-has-order"
     },

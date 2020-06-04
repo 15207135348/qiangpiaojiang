@@ -2,7 +2,7 @@
 <view class='container-fluid'>
 	<view class="background-blue height70 line-left">
         <image class="middle-icon large-padding" src="../../image/icon_7.png"></image>
-		<view class="large-text color-white middle-margin">抢票成功</view>
+		<view class="large-text color-white middle-margin">已完成</view>
 	</view>
 	<view class="column large-padding middle-margin light-background">
 

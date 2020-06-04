@@ -248,7 +248,7 @@ Page({
                                 success(res) {
                                     console.log("requestSubscribeMessage res" + res)
                                     wx.navigateTo({
-                                        url: '../order/order',
+                                        url: '../order/dualorder',
                                         events: {
                                             okEvent: function (res) {
                                                 console.log(res);

@@ -1,4 +1,3 @@
-// pages/detail/an_success.js
 var config = require('../../config.js');
 Page({
 
@@ -24,7 +23,7 @@ Page({
             that.setData({
                 order: data
             });
-            console.log("an_success页面收到order页面的数据：" + data)
+            console.log("an_paying页面收到order页面的数据：" + data)
 
             let order = data;
             console.log("请求成功订单细节");
@@ -45,16 +44,16 @@ Page({
 
     },
 
-    deleteOrder: function (e) {
+    cancelOrder: function (e) {
         console.log("deleteOrder")
         let order = this.data.order;
         wx.showModal({
-            title: '该操作不可逆，确定要删除订单吗？',
+            title: '该操作不可逆，确定要取消订单吗？',
             showCancel: true,
             success(res) {
                 if (res.confirm) {
                     console.log('用户点击确定')
-                    config.get(config.urls.DELETE_ORDER_URL, {
+                    config.get(config.urls.CANCEL_ORDER_URL, {
                         orderId: order.orderId
                     }, function (res) {
                         console.log(res)

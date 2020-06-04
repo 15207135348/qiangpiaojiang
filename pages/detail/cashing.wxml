@@ -1,8 +1,7 @@
-<!--pages/detail/an_success.wxml-->
 <view class='container-fluid'>
 	<view class="background-blue height70 line-left">
-        <image class="middle-icon large-padding" src="../../image/icon_7.png"></image>
-		<view class="large-text color-white middle-margin">已完成</view>
+        <image class="middle-icon large-padding" src="../../image/icon_25.png"></image>
+		<view class="large-text color-white middle-margin">待兑现</view>
 	</view>
 	<view class="column large-padding middle-margin light-background">
 		<view class="line-left small-padding background-white">
@@ -54,7 +53,7 @@
         </view>
 
         <view class="line middle-margin">
-            <button class="large-text autofill" bindtap="deleteOrder">删除订单</button>
+            <button class="large-text autofill" bindtap="cancelOrder">取消订单</button>
         </view>
 	</view>
 </view>

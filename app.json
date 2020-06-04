@@ -7,6 +7,7 @@
         "pages/seats/seats",
         "pages/submit/submit",
         "pages/order/order",
+        "pages/order/dualorder",
         "pages/detail/rushing",
         "pages/station/station",
         "pages/people/people",
@@ -15,7 +16,10 @@
         "pages/detail/cancelled",
         "pages/login/userprotocol",
         "pages/rushType/rushType",
-        "pages/detail/an_success"
+        "pages/detail/an_success",
+        "pages/detail/paying",
+        "pages/detail/an_paying",
+        "pages/detail/cashing"
     ],
     "window": {
         "backgroundTextStyle": "dark",
@@ -44,7 +48,7 @@
             {
                 "selectedIconPath": "image/dingdan_2.png",
                 "iconPath": "image/dingdan_1.png",
-                "pagePath": "pages/order/order",
+                "pagePath": "pages/order/dualorder",
                 "text": "订单"
             }
         ]
