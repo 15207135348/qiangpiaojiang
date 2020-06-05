@@ -10,7 +10,8 @@ Page({
         dates: "",
         trains: "",
         seats: "",
-        totalSeats: {}
+        totalSeats: {},
+        expireTime: ""
     },
 
     GetDateStr: function (AddDayCount) {
@@ -164,7 +165,23 @@ Page({
                         trains: str,
                         totalSeats: totalSeats
                     });
-
+                    //获取过期时间
+                    var params = {
+                        fromStation: that.data.fromStation,
+                        toStation: that.data.toStation,
+                        dates: that.data.dates,
+                        trains: that.data.trains
+                    }
+                    config.get(config.urls.GET_EXPIRE_TIME_URL, params, function (res) {
+                        console.log("过期时间")
+                        console.log(res.data);
+                        if (res.data.success) {
+                            let expireTime = res.data.message;
+                            that.setData({
+                                expireTime: "抢票至：" + expireTime
+                            });
+                        }
+                    });
                 }
             },
             success: function (res) {

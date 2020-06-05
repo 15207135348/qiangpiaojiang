@@ -1,5 +1,5 @@
-let basePath = 'https://yangyun.picp.vip';
-// let basePath = 'https://yangyun.xiaomy.net';
+// let basePath = 'https://yangyun.picp.vip';
+let basePath = 'https://yangyun.xiaomy.net';
 // let basePath = 'https://yangyun.xyz';
 let urls = {
     LOGIN_WX_URL: basePath + '/auth/login_wx',
@@ -7,6 +7,7 @@ let urls = {
     SET12306ACCOUNT_URL: basePath + "/auth/set_12306_account",
     FUCK12306_URL: basePath + "/12306/fuck12306",
     GET_TRAINS_URL: basePath + "/12306/get_trains",
+    GET_EXPIRE_TIME_URL: basePath + "/12306/get_expire_time",
     GET_ORDERS_URL: basePath + "/12306/get_orders",
     GET_PEOPLE_URL: basePath + "/12306/get_people",
     GET_QUERT_COUNT_URL: basePath + "/12306/get_query_count",

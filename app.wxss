@@ -137,6 +137,9 @@ button {
 .xlarge-padding{
     padding: 8px;
 }
+.xxsmall-text{
+    font-size: 11px;
+}
 .xsmall-text{
     font-size: 12px;
 }

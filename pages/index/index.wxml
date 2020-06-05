@@ -41,5 +41,9 @@
         <view class="line middle-margin">
             <button class="large-text autofill" bindtap="bindtapNext">下一步</button>
         </view>
+
+        <view class="line middle-margin-left-right-bottom float-right">
+            <view class="xsmall-text color-gray middle-padding-left-right-bottom">{{expireTime}}</view>
+        </view>
     </view>
 </view>
